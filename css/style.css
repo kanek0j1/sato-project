@@ -123,7 +123,7 @@ body {
   background: rgba(77,182,172,0.10);
 }
 .creative-hero {
-  min-height: 70vh;
+  min-height: 100vh; /* 画面いっぱいに表示 */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -144,40 +144,107 @@ body {
   z-index: 1;
   overflow: hidden;
 }
+/* hero-controls removed per user preference */
 .hero-particle {
   position: absolute;
   border-radius: 50%;
-  opacity: 0.18;
-  background: linear-gradient(120deg, #4db6ac, #ffb74d);
-  animation: particleMove 12s linear infinite;
+  overflow: hidden;
+  border: 3px solid rgba(255,255,255,0.50);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* デフォルトのアニメーション時間も長くして速度を遅くする */
+  animation: particleMove 24s linear infinite;
+  transform-origin: center;
+  filter: drop-shadow(0 8px 18px rgba(0,0,0,0.10));
+  /* 泡をやや透過させる */
+  opacity: 0.78;
+  backdrop-filter: blur(1px);
+  /* transform の変化をゆっくり滑らかにして、カーソル回避をふわっと見せる */
+  transition: transform 0.6s cubic-bezier(.22,.9,.3,1), opacity 0.6s ease;
+  will-change: transform, opacity;
+}
+
+/* 光沢ハイライト（泡っぽさ） */
+.hero-particle::after {
+  content: "";
+  position: absolute;
+  left: 10%;
+  top: 6%;
+  width: 60%;
+  height: 40%;
+  pointer-events: none;
+  border-radius: 50%;
+  /* ハイライトはやや控えめに */
+  background: radial-gradient(closest-side at 20% 20%, rgba(255,255,255,0.60), rgba(255,255,255,0.18) 36%, rgba(255,255,255,0) 56%);
+  mix-blend-mode: screen;
+  transform: translateZ(0);
+}
+
+/* 内側のささやかなグローで厚みを出す */
+.hero-particle::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  /* 内側の薄いグロー（少しだけ明るめ） */
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(0,0,0,0.03));
+  pointer-events: none;
+}
+
+/* 背景画像と白色の薄いレイヤーを混ぜて、泡の向こう側が透ける印象にする */
+.hero-particle {
+  background-color: rgba(255,255,255,0.02);
+  background-blend-mode: overlay;
 }
 @keyframes particleMove {
-  0% { transform: translateY(0) scale(1); opacity: 0.18; }
-  50% { opacity: 0.32; }
-  100% { transform: translateY(-120vh) scale(1.3); opacity: 0; }
+  0% {
+    transform: translateX(0) translateY(0) scale(var(--s,1)) rotate(0deg) translate(var(--cx, 0px), var(--cy, 0px));
+    opacity: 0.85;
+  }
+  30% {
+    transform: translateX(calc(var(--tx, 0) * 0.35)) translateY(-30vh) scale(calc(var(--s,1) * 1.02)) rotate(calc(var(--rot,0) * 0.25)) translate(var(--cx, 0px), var(--cy, 0px));
+    opacity: 0.8;
+  }
+  60% {
+    transform: translateX(calc(var(--tx, 0) * 0.7)) translateY(-70vh) scale(calc(var(--s,1) * 1.08)) rotate(calc(var(--rot,0) * 0.6)) translate(var(--cx, 0px), var(--cy, 0px));
+    opacity: 0.65;
+  }
+  100% {
+    transform: translateX(var(--tx, 0)) translateY(-120vh) scale(calc(var(--s,1) * 1.25)) rotate(var(--rot,0)) translate(var(--cx, 0px), var(--cy, 0px));
+    opacity: 0;
+  }
 }
 .hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   text-align: center;
-  padding: 7vw 2vw 8vw 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2vw;
+  pointer-events: auto;
 }
 .hero-content h1 {
-  font-size: 3.2rem;
+  /* 1段階小さく */
+  font-size: clamp(2.4rem, 7.5vw, 5.5rem);
   font-weight: 900;
-  margin: 0 0 1.2rem 0;
-  letter-spacing: 0.08em;
-  color: #3b5c3b;
+  margin: 0 0 0.6rem 0;
+  line-height: 1;
+  letter-spacing: 0.06em;
+  color: #234831; /* よりはっきり見える色に */
   background: none;
   -webkit-text-fill-color: initial;
-  font-family: 'Mochiy Pop One', 'Caveat', 'Yomogi', cursive, sans-serif;
-  text-shadow: 0 2px 12px rgba(123,180,123,0.08);
+  font-family: 'Mochiy Pop One';
+  text-shadow: 0 6px 28px rgba(50,80,50,0.18);
+  text-transform: none;
 }
 .hero-content .accent {
-  font-size: 1.3em;
-  font-family: 'Poppins', 'Montserrat', cursive;
-  letter-spacing: 0.12em;
-  color: #7bb47b;
+  font-size: 1.05em;
+  font-family: 'Poppins', 'Montserrat';
+  letter-spacing: 0.08em;
+  color: #3b6f4f;
   background: none;
   -webkit-text-fill-color: initial;
 }
@@ -310,7 +377,7 @@ body {
   margin-bottom: 1.2rem;
   color: #4db6ac;
   letter-spacing: 0.04em;
-  font-family: 'Mochiy Pop One', 'Caveat', 'Yomogi', cursive, sans-serif;
+  font-family:sans-serif;
   position: relative;
   text-align: center;
 }
@@ -671,7 +738,7 @@ body {
 }
 #activities .activity-list a {
   font-size: 1.4rem;
-  font-family: 'Mochiy Pop One', 'Caveat', 'Yomogi', cursive, sans-serif;
+  font-family: sans-serif;
   background: linear-gradient(90deg, #7bb47b 60%, #e3efe3 100%);
   color: #fff;
   border-radius: 2em;
