@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>佐藤プロジェクト 2025</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/main.js"></script>
+  <script defer src="js/events.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Mochiy+Pop+One&family=Yomogi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-left">
+      <img src="images/logo.png" alt="ロゴ" class="main-logo" />
+      <span class="site-title">佐藤プロジェクト 2025</span>
+    </div>
+    <button class="menu-btn" aria-label="メインメニューを開閉" aria-expanded="false">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <nav class="nav-drawer" style="z-index:1200;">
+      <ul>
+        <li><a href="#about">プロジェクト概要</a></li>
+        <li><a href="#iot">IoT班</a></li>
+        <li><a href="#creative">クリエイティブ班</a></li>
+        <li><a href="#activities">活動記録</a></li>
+        <li><a href="#events">イベント</a></li>
+        <li><a href="#goals">今後の目標</a></li>
+        <li><a href="#members">メンバー</a></li>
+      </ul>
+    </nav>
+    <div class="drawer-bg"></div>
+  </header>
+  <main>
+    <section id="hero" class="hero-section creative-hero">
+      <div class="hero-bg-svg">
+        <svg viewBox="0 0 1440 320" width="100%" height="100%" preserveAspectRatio="none" style="position:absolute;left:0;top:0;width:100%;height:100%;z-index:0;"><defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#4db6ac"/><stop offset="100%" stop-color="#ffb74d"/></linearGradient></defs><path fill="url(#g1)" fill-opacity="0.7" d="M0,160L60,170.7C120,181,240,203,360,197.3C480,192,600,160,720,133.3C840,107,960,85,1080,101.3C1200,117,1320,171,1380,197.3L1440,224L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>
+      </div>
+      <div class="hero-particles"></div>
+      <div class="hero-content">
+        <h1><span class="accent">未来をつくる</span><br>SATO PROJECT 2025</h1>
+        <p>IoT × 地域交流 × クラフトビール</p>
+        <a href="#about" class="cta-btn">プロジェクトについて</a>
+      </div>
+    </section>
+    <section id="about" class="section-card creative-section">
+      <div class="section-inner two-col">
+        <div class="section-text">
+          <h2>プロジェクト概要</h2>
+          <p>　ホップ栽培を通じて、まちと学生がつながる場を作ること。そしてIoT技術を活用し、植物栽培において感じるハードルを下げ、現代の生活から減ってきている緑との交流を増やすことを目的とした活動を行っています。
+            <br>
+            　なんでもつながる時代だからこそ、私たちは「まちと人と植物と学生」をデジタルの力とクラフトビールでつなげたい。そんな思いから日々活動をしています！
+          </p>
+        </div>
+        <div class="section-imgs">
+          <div class="polaroid-wrap">
+            <span class="tape tape-left"></span>
+            <span class="tape tape-right"></span>
+            <img
+              src="images/概要.JPG"
+              alt="プロジェクト概要イメージ"
+              class="photo-polaroid"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- IoTチーム -->
+    <section id="iot" class="section-card creative-section">
+      <div class="section-inner two-col reverse">
+        <div class="section-text">
+          <h2>IoT班</h2>
+          <p>
+            　ホップ栽培にテクノロジーの力を取り入れることで、植物を栽培するなかで感じるハードルを下げることが目標です！<br>
+            　自動水やり機開発、センサーを用いたデータ収集、定点観測カメラの設置などを行なっています。
+          </p>
+            <p>
+              ・土壌センサーを用いた自動水やり装置の開発<br>
+              ・センサーのデータをグラフ化し、ホップ栽培の過程を見える化<br>
+              ・定点・LIVEホップ観測カメラの設置<br>
+              ・多摩区の皆さんや他大学との協働<br>
+            </p>
+        </div>
+        <div class="section-imgs">
+          <div class="polaroid-wrap">
+            <span class="tape tape-left"></span>
+            <span class="tape tape-right"></span>
+            <img
+              src="images/tes_iot.jpg"
+              alt="IoTイメージ"
+              class="photo-polaroid"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="creative" class="section-card creative-section">
+      <div class="section-inner two-col">
+        <div class="section-text">
+          <h2>クリエイティブ班</h2>
+            <p>
+              　ホップ栽培とクラフトビールをツールとして活用し、人との関わりをデザインしていくことが目標です！<br>
+              　ロゴ作成、ラベルデザイン、イベント企画、おつまみ開発などを担当行っています。
+            </p>
+              <p>
+                ・去年の思いを引き継いだ、佐藤プロジェクトの新ロゴマーク作成<br>
+                ・オリジナルクラフトビールの瓶ラベルデザイン<br>
+                ・試飲会などのイベント企画<br>
+                ・多摩区の皆さんや他大学との協働<br>
+                ・栽培した野菜を活用したおつまみ開発<br>
+              </p>
+        </div>
+        <div class="section-imgs">
+          <div class="polaroid-wrap">
+            <span class="tape tape-left"></span>
+            <span class="tape tape-right"></span>
+            <img
+              src="images/tes_create.jpg"
+              alt="クリエイティブイメージ"
+              class="photo-polaroid"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="activities" class="section-card creative-section">
+      <div class="section-inner">
+        <h2>毎週の活動記録</h2>
+        <div class="section-imgs">
+          <div class="tape"></div>
+          <div class="tape tape2"></div>
+          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="活動記録イメージ" class="photo-polaroid">
+        </div>
+        <ul class="activity-list">
+          <li><a href="https://sites.google.com/senshu-u.jp/craftbeer-sato2025/" target="_blank">毎週の活動記録はこちら</a></li>
+        </ul>
+      </div>
+    </section>
+    <section id="events" class="section-card creative-section">
+      <div class="section-inner">
+        <h2>イベントスケジュール</h2>
+        <div class="section-imgs">
+        <div class="tape"></div>
+        <div class="tape tape2"></div>
+        <img
+          src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=400&q=80"
+          alt="イベントイメージ"
+          class="photo-polaroid"
+        />
+      </div>
+
+      <div class="event-cards-wrap">
+        <div class="event-pagination" aria-hidden="false">
+          <button class="events-prev" aria-label="前の月">◀</button>
+          <div class="event-month-title" aria-live="polite"></div>
+          <button class="events-next" aria-label="次の月">▶</button>
+        </div>
+
+        <div class="event-cards" data-current-month="">
+          <!-- 6月 -->
+          <div class="event-card" data-month="6">
+            <div class="event-date">6/22</div>
+            <div class="event-title">第1回学生バー(Hop in aloha)</div>
+            <div class="event-desc">
+              向ヶ丘遊園駅徒歩1分、五廻さんをお借りして毎月第2日曜日に開催します。<br>
+              地域の人との交流の場として、また専修クラフトビールの販売場所としても！
+            </div>
+          </div>
+
+          <!-- 7月 -->
+          <div class="event-card" data-month="7">
+            <div class="event-date">7/4</div>
+            <div class="event-title">ホップサイダー試飲会</div>
+            <div class="event-desc">
+              ホップペレットを使用した、自作のホップサイダー試飲イベントを開催。
+            </div>
+          </div>
+          <div class="event-card" data-month="7">
+            <div class="event-date">7/13</div>
+            <div class="event-title">第2回学生バー(Hop in aloha)</div>
+            <div class="event-desc">
+              向ヶ丘遊園駅徒歩1分、五廻さんをお借りして毎月第2日曜日に開催します。<br>
+              地域の人との交流の場として、また専修クラフトビールの販売場所としても！
+            </div>
+          </div>
+
+          <!-- 8月 -->
+          <div class="event-card" data-month="8">
+            <div class="event-date">8/1</div>
+            <div class="event-title">シンポジウム</div>
+            <div class="event-desc">
+              川崎市多摩区役所で開催。基調講演・リレートーク・ポスターセッション・パネルディスカッション。
+            </div>
+            <a href="https://www.instagram.com/p/DK--fiHzk8q/?igsh=MW9jOGZmcjF2YXZ3dw%3D%3D&img_index=1" target="_blank" class="more-link">詳細はこちら</a>
+          </div>
+          <div class="event-card" data-month="8">
+            <div class="event-date">8/6-10</div>
+            <div class="event-title">第1,2回能登遠征</div>
+          </div>
+          <div class="event-card" data-month="8">
+            <div class="event-date">8/10</div>
+            <div class="event-title">第3回学生バー(夏祭りver.)</div>
+          </div>
+
+          <!-- 9月 -->
+          <div class="event-card" data-month="9">
+            <div class="event-date">9/9-10</div>
+            <div class="event-title">第3回能登遠征</div>
+          </div>
+          <div class="event-card" data-month="9">
+            <div class="event-date">9/14</div>
+            <div class="event-title">第4回学生バー(お月見ver.)</div>
+          </div>
+          <div class="event-card" data-month="9">
+            <div class="event-date">9/18-20</div>
+            <div class="event-title">宮城親睦旅行</div>
+          </div>
+
+          <!-- 10月 -->
+          <div class="event-card" data-month="10">
+            <div class="event-date">10/12</div>
+            <div class="event-title">ピクたま / 学生バー(ハロウィンver.)</div>
+          </div>
+          <div class="event-card" data-month="10">
+            <div class="event-date">10/20</div>
+            <div class="event-title">ホップ収穫祭</div>
+          </div>
+
+          <!-- 11月 -->
+          <div class="event-card" data-month="11">
+            <div class="event-date">11/13</div>
+            <div class="event-title">川崎国際技術展</div>
+          </div>
+          <div class="event-card" data-month="11">
+            <div class="event-date">11/17</div>
+            <div class="event-title">生田っこ見学</div>
+          </div>
+          <div class="event-card" data-month="11">
+            <div class="event-date">11/19</div>
+            <div class="event-title">おつまみ研究会</div>
+          </div>
+
+          <!-- 12月 -->
+          <div class="event-card" data-month="12">
+            <div class="event-date">12/13</div>
+            <div class="event-title">最終発表</div>
+          </div>
+          <div class="event-card" data-month="12">
+            <div class="event-date">12/14</div>
+            <div class="event-title">クリスマス学生バー</div>
+          </div>
+
+          <!-- 1月 -->
+          <div class="event-card" data-month="1">
+            <div class="event-date">1/25</div>
+            <div class="event-title">ビールお披露目会</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="goals" class="section-card creative-section">
+      <div class="section-inner">
+        <h2>今後の目標</h2>
+        <div class="section-imgs">
+          <div class="tape"></div>
+          <div class="tape tape2"></div>
+          <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a3fdc?auto=format&fit=crop&w=400&q=80" alt="今後の目標イメージ" class="photo-polaroid">
+        </div>
+        <ul>
+          <li>2年生への活動引き継ぎと広報強化</li>
+          <li>学内外での研究発表・論文執筆</li>
+          <li>IoTホップ棚の改良・移動・自動化</li>
+          <li>地域連携・イベントの拡大</li>
+        </ul>
+      </div>
+    </section>
+    <section id="members" class="section-card creative-section">
+      <div class="section-inner">
+        <h2>チームメンバー</h2>
+        <div class="member-rows">
+          <div class="member-row row-sp-teachers row-pc-teachers">
+            <div class="member-card creative">
+              <img src="images/teacher1.JPG" alt="先生1"/>
+              <div class="member-name">佐藤先生</div>
+              <div class="member-course">DSプログラム</div>
+            </div>
+            <div class="member-card creative">
+              <img src="images/teacher2.JPEG" alt="先生2"/>
+              <div class="member-name">淺海先生</div>
+              <div class="member-course">地域コーディネータ</div>
+            </div>
+          </div>
+          <div class="member-row row-pc-1">
+            <div class="member-card creative"><img src="images/miu.JPG"/><div class="member-name">みうみう <span class="badge">リーダー</span></div><div class="member-course">CDプログラム</div></div>
+            <div class="member-card creative"><img src="images/misa.jpg" /><div class="member-name">みさっきー <span class="badge">サブ</span></div><div class="member-course">DSプログラム</div></div>
+            <div class="member-card creative"><img src="images/sato.JPG"/><div class="member-name">さとるん</div><div class="member-course">NSプログラム</div></div>
+            <div class="member-card creative"><img src="images/mizuki.jpg"/><div class="member-name">みずきたん</div><div class="member-course">CDプログラム</div></div>
+            <div class="member-card creative"><img src="images/sugisugi.jpg" /><div class="member-name">すぎすぎ</div><div class="member-course">PCプログラム</div></div>
+          </div>
+          <div class="member-row row-pc-2">
+            <div class="member-card creative"><img src="images/suba.jpg"/><div class="member-name">すばるん</div><div class="member-course">MCプログラム</div></div>
+            <div class="member-card creative"><img src="images/konoka.JPG"  /><div class="member-name">このちゃん</div><div class="member-course">PCプログラム</div></div>
+            <div class="member-card creative"><img src="images/kene.jpg" /><div class="member-name">ケイン</div><div class="member-course">NSプログラム</div></div>
+            <div class="member-card creative"><img src="images/kenken.JPG" /><div class="member-name">けんけん</div><div class="member-course">MCプログラム</div></div>
+          </div>
+
+          <div class="member-row row-sp-1">
+            <div class="member-card creative"><img src="images/miu.JPG"/><div class="member-name">みうみう </div><div class="member-course">CDプログラム</div></div>
+            <div class="member-card creative"><img src="images/misa.jpg" /><div class="member-name">みさっきー </div><div class="member-course">DSプログラム</div></div>
+            <div class="member-card creative"><img src="images/sato.JPG"/><div class="member-name">さとるん </div><div class="member-course">NSプログラム</div></div>
+          </div>
+          <div class="member-row row-sp-2">
+            <div class="member-card creative"><img src="images/mizuki.jpg"/><div class="member-name">みづきたん</div><div class="member-course">CDプログラム</div></div>
+            <div class="member-card creative"><img src="images/sugisugi.jpg" /><div class="member-name">すぎすぎ</div><div class="member-course">PCプログラム</div></div>
+            <div class="member-card creative"><img src="images/suba.jpg"/><div class="member-name">すばるん</div><div class="member-course">MCプログラム</div></div>
+          </div>
+          <div class="member-row row-sp-3">
+            <div class="member-card creative"><img src="images/konoka.JPG"  /><div class="member-name">このちゃん</div><div class="member-course">PCプログラム</div></div>
+            <div class="member-card creative"><img src="images/kene.jpg" /><div class="member-name">ケイン</div><div class="member-course">NSプログラム</div></div>
+            <div class="member-card creative"><img src="images/kenken.JPG" /><div class="member-name">けんけん</div><div class="member-course">MCプログラム</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="sns" class="section-card creative-section">
+      <div class="section-inner">
+        <h2>外部リンク</h2>
+        <div class="section-imgs">
+          <img src="https://images.unsplash.com/photo-1465101053361-7630c558068c?auto=format&fit=crop&w=400&q=80" alt="外部リンクイメージ" style="max-width:220px;">
+        </div>
+        <div class="sns-links">
+          <a href="https://www.instagram.com/sato_project2025/" class="sns-icon insta">Instagram</a>
+          <a href="https://www.youtube.com/@%E5%B0%82%E4%BF%AE%E5%A4%A7%E5%AD%A6_%E3%83%9B%E3%83%83%E3%83%97%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88" class="sns-icon yt">YouTube</a>
+          <a href="https://sites.google.com/senshu-u.jp/craftbeer-sato2025/" target="_blank" class="sns-icon"><i class="fas fa-globe"></i> Googleサイト</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>© 2025 SATO PROJECT All Rights Reserved.</span>
+    </div>
+  </footer>
+</body>
+</html>
